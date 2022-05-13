@@ -1,0 +1,49 @@
+Java Collection frameworks:
+
+1. List interface:
+	a. ArrayList<E> class
+		read all the constructors of ArrayList class 
+		.add() method .remove() method, .size() method
+		.toArray() method, .get(int index), .indexOf(Object obj), .set(int index, Object obj), .subList(int start, int end) 
+	b. LinkedList<E> class : only the basics needed for queue implementation
+
+2. Set, NavigableSet, SortedSet interface:
+	a. TreeSet<E> class: it is both navigable and ascending order sorted. It implements a BST under the hood
+		all the constructors along with fillRatio
+		.descendingSet(), .descendingIterator(), .pollFirst(), .pollLast()
+
+3. Queue and Dequeue interface:
+	a. ArrayDeque<E> class: it is most handy as we can use it stack as well as one directional queue
+		all the constructors 
+		.push(), .pop() and .peek() to use it as stack
+		.poll() , .offer() to use it as linear queue
+		.addFirst(), .addLast(), .removeFirst(), .removeLast(), getFirst(), .getLast() to use the full functionality of a deque with exception checking
+
+4. Map Interface:
+	a.HashMap<K,V> class: One of the most useful data structure to store key value pairs
+		all the constructors with fill ratio
+		.get(K key) , .put(K key, V value)
+		.remove(K key), containsKey(K key), putIfAbsent(K key, V value), .keys() , .values(), .replace() { there are two replace methods with different parameters }
+
+5. Map, NavigableMap, SortedMap: 
+	a. TreeMap<K,V> class: very useful datastructure for complex algorithm implemetation. It is ascending order sorted with respect to the keys as well as navigable. It uses a BST under the hood with each nodes placed with respect to the key
+	all the constructors. We can use custom Comparator to change the sorting parameter
+	methods are same as HashMap class
+
+
+The above are the basics of Collection framework's data structures. Apart from it we need:
+	a. for(:) loop to navigate
+	b. Iterator and ListIterator with .hasNext(), .next() methods. They are flexible for multi directional traversal
+	c. Comparator basics only to change the default sorting parameter and conditions in the SortedSet, SortedMap
+
+Collection Algorithms:
+	a. binarySearch() 
+	b. copy()
+	c. EMPTY_LIST, EMPTY_SET, EMPTY_MAP . These are static final values requires for condition checking
+	d. reverse()
+	e. max(), min()
+	f. sort()
+
+Legacy Class:
+	a. Stack: it is an old but a thread safe implementation of stack. It is commonly used in coding community instead of the deque implementation
+		.push(), .pop(), .peek(), .search() 
